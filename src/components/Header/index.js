@@ -1,5 +1,7 @@
 import React from "react"
 import Photo from './photo'
+import flagBR from '../../images/flag-BR.png'
+import flagUSA from '../../images/flag-USA.png'
 
 import GlobalStyles from "../../styles/global";
 
@@ -18,6 +20,10 @@ const Header = () => (
             <li>Quem sou</li>
             <li>Portfólio</li>
             <li>Contatos</li>
+            <li>
+              <img src={flagBR} alt="Idioma Português" />
+              <img src={flagUSA} alt="English language" />
+            </li>
           </ul>
         </S.Menu>
       </S.Top>
