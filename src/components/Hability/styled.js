@@ -6,9 +6,8 @@ export const Wrapper = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
   font-family: ${fontFamily};
   width: 99vw;
-  height: 768px;
+  height: 650px;
   position: relative;
-  margin-bottom: 50px;
   
 `;
 
