@@ -7,7 +7,10 @@ export const Wrapper = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
   font-family: ${fontFamily};
   width: 99vw;
-  height: 768px;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-image: url(${BgHeader});
   background-position: bottom left;
@@ -26,10 +29,9 @@ export const Container = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   width: 85%;
-  height: 790px;
+  height: 680px;
   margin: 0 auto;
-  padding-top: 20px;
-  border: 1px solid green;
+  border: 1px solid red;
   
   @media(min-width: 1480px) {
     width: 1260px;
@@ -52,9 +54,7 @@ export const IconRepository = styled.div`
   align-items: center;
   width: 45%;
   height: 790px;
-  border: 1px solid red;
 `;
-
 
 export const ListRepository = styled.div`
   display: flex;
@@ -63,7 +63,6 @@ export const ListRepository = styled.div`
   align-items: center;
   width: 55%;
   height: 790px;
-  border: 1px solid red;
 `;
 
 export const BoxRepository = styled.div`
@@ -105,16 +104,16 @@ export const BoxRepository = styled.div`
   }
  
   &::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
 
   &::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(39,37,62,0.3); 
-    border-radius: 10px;
+    border-radius: 0 100px 100px 0;
   }
   
   &::-webkit-scrollbar-thumb {
-    border-radius: 5px;
+    border-radius: 0 100px 100px 0;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
   }
 `;
