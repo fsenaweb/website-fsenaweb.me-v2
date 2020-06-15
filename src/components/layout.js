@@ -12,6 +12,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from '../components/Header'
 import Hability from "../components/Hability";
 import Repository from "../components/Repository";
+import Publication from "../components/Publication";
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,6 +31,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Hability/>
       <Repository />
+      <Publication />
       <div
         style={{
           margin: `0 auto`,

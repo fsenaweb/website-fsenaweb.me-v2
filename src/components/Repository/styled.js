@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   background-image: url(${BgHeader});
   background-position: bottom left;
   background-repeat: repeat-x;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   
   @media(min-width: 1600px) {
     background-position: bottom center;
