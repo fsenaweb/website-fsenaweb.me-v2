@@ -31,7 +31,6 @@ export const Container = styled.div`
   width: 85%;
   height: 680px;
   margin: 0 auto;
-  border: 1px solid red;
   
   @media(min-width: 1480px) {
     width: 1260px;
