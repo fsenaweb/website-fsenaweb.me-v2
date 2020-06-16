@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import BgHeader from '../../images/header-bg.svg';
+import BgHeader from '../../images/header-bg.png';
 
 import { LinkedinSquare, MediumSquare, InstagramAlt, FacebookSquare, Github, Twitter } from '@styled-icons/boxicons-logos';
 
 const fontFamily = 'Roboto, sans-serif'
 
 export const Wrapper = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
   font-family: ${fontFamily};
   width: 99vw;
   height: 768px;
