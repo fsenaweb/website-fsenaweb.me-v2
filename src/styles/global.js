@@ -1,5 +1,16 @@
 import {createGlobalStyle} from "styled-components"
 
+export const device = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopM: '1280px',
+  laptopL: '1440px',
+  desktop: '2560px'
+}
+
 const GlobalStyles = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
