@@ -75,12 +75,14 @@ export const Wrapper = styled.div`
     background-image: linear-gradient(to bottom, #4c2b75, #2f2b4a);
     background-position: -50% 350%;
     height: 450px;
+    margin-bottom: 30px;
   }
   
   @media screen and (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
     width: 100vw;
     height: 600px;
     background-position: -40% 105%;
+    margin-bottom: 30px;
   }
   
   @media(min-width: ${device.laptopL}) {

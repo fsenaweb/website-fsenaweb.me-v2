@@ -16,7 +16,7 @@ import iconQUASAR from '../../images/icon-QUASAR.png'
 
 export const icons = [
   {
-    title: 'PHP 7.x',
+    title: 'PHP 7',
     image: iconPHP,
   },
   {
@@ -32,20 +32,20 @@ export const icons = [
     image: iconREACT,
   },
   {
-    title: 'Laravel',
-    image: iconLARAVEL,
-  },
-  {
-    title: 'Codeigniter',
-    image: iconCI,
-  },
-  {
     title: 'Docker',
     image: iconDOCKER,
   },
   {
+    title: 'Laravel',
+    image: iconLARAVEL,
+  },
+  {
     title: 'Lumen',
     image: iconLUMEN,
+  },
+  {
+    title: 'Codeigniter',
+    image: iconCI,
   },
   {
     title: 'Git',
@@ -64,12 +64,12 @@ export const icons = [
     image: iconGASTBY,
   },
   {
-    title: 'GraphQL',
-    image: iconGRQL,
-  },
-  {
     title: 'Nuxt.js',
     image: iconNUXT,
+  },
+  {
+    title: 'GraphQL',
+    image: iconGRQL,
   },
   {
     title: 'Quasar',
