@@ -36,7 +36,7 @@ const Photo = () => {
       const j = Math.floor(Math.random() * (i + 1));
       setCurrentImage(j)
     }, 10000);
-  }, []);
+  }, [images]);
 
   return (
     <svg width="589" height="685" viewBox="0 0 589 685" fill="none" xmlns="http://www.w3.org/2000/svg">
