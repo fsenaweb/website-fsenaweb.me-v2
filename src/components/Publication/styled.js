@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { device} from "../../styles/global";
 
 const fontFamily = 'Roboto, sans-serif'
 
@@ -13,6 +14,10 @@ export const Wrapper = styled.div`
   height: 550px;
   position: relative;
   margin-bottom: 30px;
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    display: none;
+  }
 `;
 
 export const Container = styled.div`

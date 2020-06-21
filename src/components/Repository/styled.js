@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import BgHeader from '../../images/repository-bg.svg';
+import { device} from "../../styles/global";
 
 const fontFamily = 'Roboto, sans-serif'
 
@@ -16,6 +17,10 @@ export const Wrapper = styled.div`
   background-position: bottom left;
   background-repeat: repeat-x;
   margin-bottom: 30px;
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    display: none;
+  }
   
   @media(min-width: 1600px) {
     background-position: bottom center;
@@ -114,5 +119,9 @@ export const BoxRepository = styled.div`
   &::-webkit-scrollbar-thumb {
     border-radius: 0 100px 100px 0;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  }
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    display: none;
   }
 `;

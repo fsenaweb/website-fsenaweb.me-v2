@@ -1,13 +1,67 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import BgHeader from '../../images/header-bg.png';
-import { device } from "../../styles/global";
+import {device} from "../../styles/global";
 
-import { LinkedinSquare, MediumSquare, InstagramAlt, FacebookSquare, Github, Twitter } from '@styled-icons/boxicons-logos';
+import {
+  LinkedinSquare,
+  MediumSquare,
+  InstagramAlt,
+  FacebookSquare,
+  Github,
+  Twitter
+} from '@styled-icons/boxicons-logos';
+import {Menu} from '@styled-icons/boxicons-regular';
+import { Close } from '@styled-icons/evaicons-solid'
 
 const fontFamily = 'Roboto, sans-serif'
 
+// ANIMATIONS
+const rotateOpen = keyframes`
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+`;
+
+const rotateClose = keyframes`
+  from {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+`;
+
+const fadeImage = keyframes`
+  0%{
+    opacity: 0;
+  }
+  20%{
+    opacity: 0.5;
+  }
+  40%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+  }
+`;
+
 export const Wrapper = styled.div`
-   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
   font-family: ${fontFamily};
   width: 99vw;
   height: 768px;
@@ -20,17 +74,19 @@ export const Wrapper = styled.div`
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
     background-image: linear-gradient(to bottom, #4c2b75, #2f2b4a);
     background-position: -50% 350%;
-    height: 500px;
+    height: 450px;
+  }
+  
+  @media screen and (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    width: 100vw;
+    height: 600px;
+    background-position: -40% 105%;
   }
   
   @media(min-width: ${device.laptopL}) {
     background-position: bottom center;
   }
   
-  @media screen and (min-width: ${device.mobile}) and (max-width: ${device.tablet}) {
-    background-image: linear-gradient(to bottom, #4c2b75, #2f2b4a);
-    height: 550px;
-  }
 `;
 
 export const Container = styled.div`
@@ -39,8 +95,14 @@ export const Container = styled.div`
   margin: 0 auto;
   padding-top: 20px;
   
-  @media (max-width: ${device.laptop}) {
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
     width: 100%;
+    height: 450px;
+  }
+  
+  @media screen and (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    width: 90%;
+    height: 600px;
   }
   
   @media(min-width: ${device.laptopL}) {
@@ -52,7 +114,6 @@ export const Top = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 `;
 
 export const Logo = styled.h1`
@@ -85,13 +146,13 @@ export const Logo = styled.h1`
     padding-top: 12px;
   }
   
-  @media (max-width: ${device.laptop}) {
-    font-size: 2.2em;
-    padding: 20px 35px;
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    font-size: 1.8em;
+    padding: 15px;
   }
 `;
 
-export const Menu = styled.div`
+export const FirstMenu = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -155,7 +216,7 @@ export const Menu = styled.div`
     }
   }
   
-  @media (max-width: ${device.laptop}) {
+  @media (max-width: ${device.laptopS}) {
     ul {
       display: none;
     }
@@ -167,6 +228,45 @@ export const Menu = styled.div`
       margin-left: 25px;
     }
   }
+  
+`;
+
+export const MobileMenu = styled(Menu)`
+    width: 42px;
+    height: 42px;
+    color: white;
+    transition: color .1s linear;
+    display: ${props => (props.active ? 'none' : 'block')};
+    animation: ${props => (props.active ? rotateOpen : rotateClose)} .1s linear;
+    animation-direction: normal;
+    
+    &:active {
+      cursor: pointer;
+      color: #638DB3;
+    }
+    
+    @media(min-width: ${device.laptopL}) {
+      display: none;
+    }
+`;
+
+export const CloseMenu = styled(Close)`
+    width: 42px;
+    height: 42px;
+    color: white;
+    display: ${props => (props.active ? 'block' : 'none')};
+    transition: color .1s linear;
+    animation: ${props => (props.active ? rotateOpen : rotateClose)} .1s linear;
+    animation-direction: reverse;
+    
+    &:active {
+      cursor: pointer;
+      color: #638DB3;
+    }
+    
+    @media(min-width: ${device.laptopL}) {
+      display: none;
+    }
 `;
 
 export const Content = styled.div`
@@ -177,9 +277,15 @@ export const Content = styled.div`
   height: 688px;
   position: relative;
   
-   @media (max-width: ${device.laptop}) {
-    height: 600px;
-   }
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 500px;
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    height: 500px;
+  }
 `;
 
 export const HeaderPhoto = styled.div`
@@ -187,32 +293,24 @@ export const HeaderPhoto = styled.div`
   height: 688px;
   margin-top: 50px;
   
-  @media (max-width: ${device.laptop}) {
-    width: 500px;
-    height: 581px;
-    margin-top: 10px;
-    
-    svg {
-      width: 500px;
-      height: 581px;
-      margin-left: 20px;
-    }
+  svg {
+   animation: ${fadeImage} 10s ease-in infinite;
   }
   
-  @media (min-width: ${device.tablet}) and (max-width: ${device.laptop}) {
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    display: none;
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
     width: 440px;
     height: 500px;
     margin-top: 0;
     
     svg {
-      transform: scale(0.8);
-      margin-top: -60px;
-      margin-left: -20px;
+      transform: scale(0.65);
+      margin-top: -80px;
+      margin-left: -80px;
     }
-  }
-  
-  @media (min-width: ${device.mobile}) and (max-width: ${device.tablet}) {
-    display: none;
   }
 `;
 
@@ -221,13 +319,17 @@ export const Description = styled.div`
   width: 85%;
   margin-left: 50px;
   
-  @media (min-width: ${device.tablet}) and (max-width: ${device.laptop}) {
-    margin-left: 10px;
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
   }
   
-   @media (max-width: ${device.tablet}) {
-    margin-left: 10px;
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    padding: 0;
+    margin-left: 0;
   }
+  
 `;
 
 export const DescriptionText = styled.div`
@@ -242,17 +344,15 @@ export const DescriptionText = styled.div`
   margin-top: 100px;
   margin-bottom: 20px;
   
-  @media (min-width: ${device.tablet}) and (max-width: ${device.laptop}) {
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    width: 100%;
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
     font-size: 2rem;
-    margin-top: 50px;
-  }
-  
-  @media (min-width: ${device.laptop}) and (max-width: ${device.laptopM}) {
-    font-size: 2.2rem;
-  }
-  
-  @media (min-width: ${device.mobile}) and (max-width: ${device.tablet}) {
-    font-size: 1.9rem;
+    margin-top: 60px;
   }
   
 `;
@@ -267,6 +367,17 @@ export const SkillText = styled.div`
   line-height: 1.5em;
   margin-bottom: 50px;
   color: #638DB3;
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    width: 100%;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    font-size: 1.2rem;
+  }
+  
 `;
 
 export const SocialMedia = styled.div`
@@ -274,11 +385,11 @@ export const SocialMedia = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 50px;
-  padding-left: 80px;
   
-  @media (max-width: ${device.laptop}) {
-    padding-left: 0;
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    align-items: flex-start;
   }
+  
 `;
 
 export const Linkedin = styled(LinkedinSquare)`
@@ -292,7 +403,11 @@ export const Linkedin = styled(LinkedinSquare)`
     cursor: pointer;
     color: #638DB3;
   }
-`
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    margin-left: 0;
+  }
+`;
 
 export const Medium = styled(MediumSquare)`
   width: 40px;
@@ -305,7 +420,7 @@ export const Medium = styled(MediumSquare)`
     cursor: pointer;
     color: #638DB3;
   }
-`
+`;
 
 export const Insta = styled(InstagramAlt)`
   width: 40px;
@@ -318,7 +433,7 @@ export const Insta = styled(InstagramAlt)`
     cursor: pointer;
     color: #638DB3;
   }
-`
+`;
 
 export const Face = styled(FacebookSquare)`
   width: 40px;
@@ -331,11 +446,11 @@ export const Face = styled(FacebookSquare)`
     cursor: pointer;
     color: #638DB3;
   }
-`
+`;
 
 export const Git = styled(Github)`
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   margin-left: 5px;
   color: white;
   transition: color .2s linear;
@@ -344,11 +459,11 @@ export const Git = styled(Github)`
     cursor: pointer;
     color: #638DB3;
   }
-`
+`;
 
 export const Twit = styled(Twitter)`
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   margin-left: 5px;
   color: white;
   transition: color .2s linear;
@@ -357,4 +472,4 @@ export const Twit = styled(Twitter)`
     cursor: pointer;
     color: #638DB3;
   }
-`
+`;
