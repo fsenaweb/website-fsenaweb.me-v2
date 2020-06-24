@@ -14,6 +14,7 @@ const Repository = () => {
       .then(response => {
         const filtered = response.data.filter(item => item.fork === false)
         setRepositories(filtered)
+        console.log(filtered)
       })
   }
 
@@ -25,7 +26,9 @@ const Repository = () => {
     <S.Wrapper>
       <S.Container>
         <S.IconRepository>
-          <img src={iconRepository} alt="Repositórios"/>
+          <a href="https://github.com/fsenaweb/" target="_blank" rel="noreferrer noopener">
+            <S.IconGit />
+          </a>
           <h1>Repositórios</h1>
         </S.IconRepository>
         <S.ListRepository>
@@ -33,7 +36,9 @@ const Repository = () => {
           { repositories.map(item => (
             <div key={item.id} className="repository-list">
               <img src={iconRepositoryRepos} alt={item.name}/>
-              <p className="repository-name">{ item.name }</p>
+              <p className="repository-name">
+                <a href={item.html_url} target="_blank" rel="noreferrer noopener">{ item.name }</a>
+              </p>
               <p className="repository-desc">{ item.description }</p>
             </div>
           ))}

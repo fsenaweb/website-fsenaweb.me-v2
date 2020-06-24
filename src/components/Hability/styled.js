@@ -9,7 +9,13 @@ export const Wrapper = styled.div`
   width: 99vw;
   height: 650px;
   position: relative;
+  margin-bottom: 70px;
   
+  @media (min-width: ${device.mobileS})  and (max-width: ${device.laptopS}) {
+    margin-bottom: 0;
+    height: 100%;
+  
+  }
 `;
 
 export const Container = styled.div`
