@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { device} from "../../styles/global";
+import {device} from "../../styles/global";
 
 const fontFamily = 'Roboto, sans-serif'
 
@@ -16,7 +16,8 @@ export const Wrapper = styled.div`
   margin-bottom: 30px;
   
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
-    display: none;
+    font-size: 90%;
+    height: auto;
   }
 `;
 
@@ -40,6 +41,11 @@ export const Container = styled.div`
     outline: none;
     cursor: pointer;
   }
+  
+   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    width: 100%;
+    height: auto;
+   }
   
   @media(min-width: 1480px) {
     width: 1260px;
@@ -69,6 +75,11 @@ export const CarouselWrapper = styled.div`
     position: absolute;
     margin: 0 20px;
   }
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 `;
 
 export const CarouselCards = styled.div`
@@ -76,6 +87,14 @@ export const CarouselCards = styled.div`
     transition: transform 150ms ease-out;
     transform: translatex(0px);
     width: 100%;
+    
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+  }
 `;
 
 export const Card = styled.div`
@@ -122,6 +141,24 @@ export const Card = styled.div`
   & a {
     text-decoration: none;
   }
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    margin-top: 20px;
+    
+    & img {
+      height: 130px;
+      margin-bottom: 5px;
+      vertical-align: bottom;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      transition: opacity 150ms linear;
+      user-select: none;
+    }
+    
+  }
 `;
 
 export const CardFooter = styled.div`
@@ -134,6 +171,12 @@ export const CardFooter = styled.div`
   color: #2c3e50;
   user-select: none;
   min-height: 50px;
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    padding: 10px 15px;
+    font-size: 1.3em;
+  }
+  
 `;
 
 export const SeeMore = styled.div`
@@ -156,5 +199,10 @@ export const SeeMore = styled.div`
   
   & a:hover {
     color: #828282;
+  }
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    width: 75%;
+    font-size: 1.1em;
   }
 `;

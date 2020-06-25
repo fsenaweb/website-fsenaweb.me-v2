@@ -16,8 +16,7 @@ const Publication = () => {
 
   const loadMediumRepositories = async () => {
     try {
-      const mediumRssFeed = 'https://dev.to/api/articles?username=fsenaweb'
-      await axios.get(mediumRssFeed)
+      await axios.get('https://dev.to/api/articles?username=fsenaweb')
         .then(response => {
           setArticles(response.data)
         })
@@ -63,7 +62,6 @@ const Publication = () => {
             {articles.map(({title, canonical_url, cover_image}) => (
               <Card key={title} title={title} url={canonical_url} image={cover_image}/>
             ))}
-            <Card/>
           </S.CarouselCards>
         </S.CarouselWrapper>
         <button onClick={() => moveCarousel(1)}

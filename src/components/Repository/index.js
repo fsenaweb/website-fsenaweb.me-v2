@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import iconRepository from '../../images/repository-icon.png'
 import iconRepositoryRepos from '../../images/repository-repos.png'
 
 import * as S from './styled'
@@ -14,7 +13,6 @@ const Repository = () => {
       .then(response => {
         const filtered = response.data.filter(item => item.fork === false)
         setRepositories(filtered)
-        console.log(filtered)
       })
   }
 

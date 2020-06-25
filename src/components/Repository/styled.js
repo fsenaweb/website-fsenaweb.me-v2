@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: relative;
   background-image: linear-gradient(to bottom, #4c2b75, #2f2b4a);
   margin-bottom: 30px;
   
