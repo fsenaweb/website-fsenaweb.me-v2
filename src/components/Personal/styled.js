@@ -20,6 +20,10 @@ export const Wrapper = styled.div`
     height: auto;
     margin-bottom: 30px;
   }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    width: 100%;
+  }
 `;
 
 export const Container = styled.div`
@@ -35,6 +39,10 @@ export const Container = styled.div`
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
     width: 100%;
     height: auto;
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    width: 90%;
   }
   
   @media(min-width: ${device.laptopL}) {
@@ -54,6 +62,10 @@ export const BoxDescription = styled.div`
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    margin-top: 70px;
   }
 `;
 
@@ -82,12 +94,24 @@ export const TextDescription = styled.div`
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
     width: 100%;
     padding: 20px;
-    border: 1px solid red;
     
     & p {
-      font-size: 1.1em;
+      font-size: 1em;
       color: #ffffff;
       line-height: 1.1em;
+      font-weight: 300;
+    }
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    width: 55%;
+    height: 95%;
+    padding: 40px 10px;
+    
+    & p {
+      font-size: 1.2em;
+      color: #ffffff;
+      line-height: 1em;
       font-weight: 300;
     }
   }
@@ -104,7 +128,14 @@ export const ImageDescription = styled.div`
   
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
     width: 70%;
-    border: 1px solid red;
+    & img {
+      max-width: 100%;
+    }
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    width: 45%;
+    padding-top: 70px;
     & img {
       max-width: 100%;
     }
@@ -116,6 +147,18 @@ export const BoxExperience = styled.div`
   height: 100%;
   padding: 10px;
   
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    padding: 0;
+  }
+  
 `;
 
 export const Title = styled.h1`
@@ -126,6 +169,15 @@ export const Title = styled.h1`
   font-weight: 900;
   text-align: left;
   margin-bottom: 20px;
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    font-size: 1.4em;
+  }
 `;
 
 export const CardContainer = styled.div`
@@ -138,6 +190,19 @@ export const CardContainer = styled.div`
   width: 33%;
   height: 200px;
   float: left;
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    width: 90%;
+    
+    &:last-child {
+      border: none;
+    }
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    height: 150px;
+  }
 `;
 
 export const Ano = styled.div`
@@ -148,6 +213,14 @@ export const Ano = styled.div`
   color: #0a0a0a;
   opacity: 0.15;
   font-weight: 900;
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    font-size: 8.5em;
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    font-size: 6.4em;
+  }
 `;
 
 export const Cargo = styled.p`
@@ -159,6 +232,11 @@ export const Cargo = styled.p`
   line-height: 30px;
   color: #ffffff;
   font-weight: 900;
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    line-height: 20px;
+    font-size: 1.1em;
+  }
 `;
 
 export const Empresa = styled.p`
@@ -168,7 +246,13 @@ export const Empresa = styled.p`
   letter-spacing: -0.5px;
   color: #ffffff;
   font-weight: 500;
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    line-height: 15px;
+    font-size: 1em;
+  }
 `;
+
 export const Local = styled.p`
   position: relative;
   z-index: 1;
@@ -177,4 +261,9 @@ export const Local = styled.p`
   line-height: 30px;
   color: #ffffff;
   font-weight: 900;
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    line-height: 20px;
+    font-size: 0.8em;
+  }
 `;
