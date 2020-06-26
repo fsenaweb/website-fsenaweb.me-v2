@@ -62,7 +62,6 @@ const fadeImage = keyframes`
 `;
 
 export const Wrapper = styled.div`
-  font-family: ${fontFamily};
   width: 99vw;
   height: 768px;
   position: relative;

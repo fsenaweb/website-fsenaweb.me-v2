@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Hability from "../components/Hability";
 import Repository from "../components/Repository";
 import Publication from "../components/Publication";
+import Personal from "../components/Personal";
 
 const IndexPage = () => (
   <Layout>
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <Hability/>
     <Repository/>
     <Publication />
+    <Personal />
   </Layout>
 )
 
