@@ -17,11 +17,11 @@ export const Wrapper = styled.div`
   
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
     height: auto;
-    margin-bottom: 30px;
   }
   
   @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
     width: 100%;
+    height: auto;
   }
 `;
 
@@ -41,7 +41,8 @@ export const Container = styled.div`
   }
   
   @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
-    width: 90%;
+    width: 100%;
+    height: auto;
   }
   
   @media(min-width: ${device.laptopL}) {
@@ -69,20 +70,22 @@ export const ContainerForm = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   height: 500px;
   
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
-    width: 98%;
+    width: 100%;
     height: auto;
     justify-content: space-around;
     margin: 0 auto;
+    margin-bottom: 30px;
   }
   
-  @media screen and (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
     width: 95%;
     justify-content: space-around;
     margin: 0 auto;
+    margin-bottom: 30px;
   }
   
 `;
@@ -124,6 +127,36 @@ export const FormInfo = styled.div`
     }
   }
   
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    width: 95%;
+    height: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    & h1 {
+      font-size: 1.1em;
+      letter-spacing: -1px;
+      line-height: 1em;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    & h2 {
+      font-size: 1.7em;
+      letter-spacing: -1px;
+      line-height: 1.1em;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+     & h2 {
+      font-size: 2em;
+    }
+  }
 `;
 
 export const FormInput = styled.div`
@@ -196,11 +229,12 @@ export const FormInput = styled.div`
   }
   
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
-    width: 100%;
+    width: 95%;
+    padding: 30px 20px;
   }
   
   @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
-    width: 65%;
+    width: 50%;
     height: auto;
     justify-content: center;
     align-items: center;

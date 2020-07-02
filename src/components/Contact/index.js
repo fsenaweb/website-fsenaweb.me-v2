@@ -1,9 +1,34 @@
-import React from 'react';
+import React  from 'react';
+import axios from 'axios';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css'
+import useForm from "./useForm";
 
 import * as S from './styled';
-import * as SocialIcon from '../Header/styled'
+import * as SocialIcon from '../Header/styled';
 
 const Contact = () => {
+
+  const [{ values, loading }, onChangeInput, enviaMail] = useForm();
+
+  const enviarContato = () => {
+    let { nome, email, telefone, mensagem } = values
+    axios.post('https://fsenaweb.me/functions/', {
+      nome, email, telefone, mensagem
+    })
+      .then(() => {
+        toast.success('Email enviado com sucesso!')
+        console.log('Email enviado!');
+        document.getElementsByName('nome').value = '';
+        document.getElementsByName('email').value = '';
+        document.getElementsByName('telefone').value = '';
+        document.getElementsByName('mensagem').value = '';
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+  }
+
   return (
     <S.Wrapper>
       <S.Container>
@@ -26,12 +51,13 @@ const Contact = () => {
             </SocialIcon.SocialMedia>
           </S.FormInfo>
           <S.FormInput>
-            <form id="contatoForm" action="" method="post">
-            <input type="text" name="name" placeholder="Nome" required />
-            <input type="email" name="email" placeholder="E-mail" required />
-            <input type="tel" name="phone" placeholder="Telefone" />
-            <textarea name="message" placeholder="Sua mensagem" required/>
-            <input type="submit" value="Envie sua mensagem" />
+            <ToastContainer />
+            <form id="contatoForm" action="" onSubmit={enviaMail(enviarContato)} method="post">
+            <input type="text" name="nome" placeholder="Nome" onChange={onChangeInput} required />
+            <input type="email" name="email" placeholder="E-mail" onChange={onChangeInput} required />
+            <input type="tel" name="telefone" placeholder="Telefone" onChange={onChangeInput} />
+            <textarea name="mensagem" placeholder="Sua mensagem" onChange={onChangeInput} required/>
+            <input type="submit" value={loading ? "Enviando..." : "Envie sua mensagem"} />
         </form>
           </S.FormInput>
         </S.ContainerForm>
