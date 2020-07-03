@@ -30,11 +30,10 @@ const Header = () => {
             <ul>
               <li><Link to="/quem-sou">Quem sou</Link></li>
               <li><Link to="/portfolio">Portfólio</Link></li>
-              <li><Link to="/contatos">Contatos</Link></li>
-              <li>
-                <img src={flagBR} alt="Idioma Português" />
-                <img src={flagUSA} alt="English language" />
-              </li>
+              {/*<li>*/}
+              {/*  <img src={flagBR} alt="Idioma Português" />*/}
+              {/*  <img src={flagUSA} alt="English language" />*/}
+              {/*</li>*/}
             </ul>
           </S.FirstMenu>
         </S.Top>
