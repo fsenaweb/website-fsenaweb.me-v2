@@ -10,36 +10,10 @@ import {
   Github,
   Twitter
 } from '@styled-icons/boxicons-logos';
-import {Menu} from '@styled-icons/boxicons-regular';
-import { Close } from '@styled-icons/evaicons-solid'
 
 const fontFamily = 'Roboto, sans-serif'
 
 // ANIMATIONS
-const rotateOpen = keyframes`
-  from {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-
-  to {
-    transform: rotate(90deg);
-    opacity: 0;
-  }
-`;
-
-const rotateClose = keyframes`
-  from {
-    transform: rotate(90deg);
-    opacity: 0;
-  }
-
-  to {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-`;
-
 const fadeImage = keyframes`
   0%{
     opacity: 0;
@@ -62,7 +36,7 @@ const fadeImage = keyframes`
 `;
 
 export const Wrapper = styled.div`
-  width: 99vw;
+  width: 100%;
   height: 768px;
   position: relative;
   background-image: url(${BgHeader});
@@ -77,7 +51,7 @@ export const Wrapper = styled.div`
     margin-bottom: 30px;
   }
   
-  @media screen and (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
     width: 100vw;
     height: 600px;
     background-position: -40% 105%;
@@ -230,44 +204,6 @@ export const FirstMenu = styled.div`
     }
   }
   
-`;
-
-export const MobileMenu = styled(Menu)`
-    width: 42px;
-    height: 42px;
-    color: white;
-    transition: color .1s linear;
-    display: ${props => (props.active ? 'none' : 'block')};
-    animation: ${props => (props.active ? rotateOpen : rotateClose)} .1s linear;
-    animation-direction: normal;
-    
-    &:active {
-      cursor: pointer;
-      color: #638DB3;
-    }
-    
-    @media(min-width: ${device.laptopL}) {
-      display: none;
-    }
-`;
-
-export const CloseMenu = styled(Close)`
-    width: 42px;
-    height: 42px;
-    color: white;
-    display: ${props => (props.active ? 'block' : 'none')};
-    transition: color .1s linear;
-    animation: ${props => (props.active ? rotateOpen : rotateClose)} .1s linear;
-    animation-direction: reverse;
-    
-    &:active {
-      cursor: pointer;
-      color: #638DB3;
-    }
-    
-    @media(min-width: ${device.laptopL}) {
-      display: none;
-    }
 `;
 
 export const Content = styled.div`

@@ -1,20 +1,13 @@
-import React, { useState } from "react"
+import React  from "react"
 import { Link } from 'gatsby'
+import MenuMobile from '../MenuMobile';
+
 import Photo from './photo'
-import flagBR from '../../images/flag-BR.png'
-import flagUSA from '../../images/flag-USA.png'
 
 import GlobalStyles from "../../styles/global";
-
 import * as S from './styled'
 
 const Header = () => {
-
-  const [ close, setClose ] = useState(false)
-
-  const toggleMenu = () => {
-    setClose(!close)
-  }
 
   return (
     <S.Wrapper>
@@ -25,8 +18,6 @@ const Header = () => {
             <Link to="/">fsenaweb<span>.me</span></Link>
           </S.Logo>
           <S.FirstMenu>
-            <S.MobileMenu onClick={() => toggleMenu()} active={close}/>
-            <S.CloseMenu  onClick={() => toggleMenu()} active={close}/>
             <ul>
               <li><Link to="/quem-sou">Quem sou</Link></li>
               <li><Link to="/portfolio">Portfólio</Link></li>
@@ -36,6 +27,7 @@ const Header = () => {
               {/*</li>*/}
             </ul>
           </S.FirstMenu>
+          <MenuMobile />
         </S.Top>
         <S.Content>
           <S.HeaderPhoto>
