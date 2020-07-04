@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import PagePortfolio from "../components/Portfolio";
 
 import Layout from "../components/layout"

@@ -1,10 +1,10 @@
 import * as React from 'react';
-import PersonalPhoto from '../../images/personal-photo.png'
-import { icons } from '../Hability/icon'
-
+import { icons } from '../Hability/icon';
 import * as S from './styled';
 
-const About = () => {
+const PersonalPhoto = require("./../../images/personal-photo.png");
+
+const About: React.FC = () => {
   return (
     <S.Wrapper>
       <S.Container>

@@ -41,6 +41,7 @@ export const Container = styled.div`
   @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
     width: 100%;
     height: auto;
+    
   }
   
   @media(min-width: ${device.laptopL}) {
@@ -73,8 +74,10 @@ export const ContainerAbout = styled.div`
   
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
     width: 100%;
+    min-height: 1900px;
     height: auto;
-    justify-content: space-around;
+    max-height: 2300px;
+    flex-direction: row;
     margin: 0 auto;
     margin-bottom: 30px;
   }
@@ -130,11 +133,13 @@ export const AboutInfo = styled.div`
   }
   
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
-    width: 95%;
-    height: 100%;
+    width: 100%;
+    min-height: 670px;
+    height: 700px;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 20px 25px;
+    padding: 10px 30px;
     
     & h1, h2 {
       font-size: 1em;
@@ -178,8 +183,9 @@ export const AboutText = styled.div`
   
   
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
-    width: 95%;
-    padding: 30px 20px;
+    width: 100%;
+    height: auto;
+    padding: 10px 25px;
     
     & p {
       font-size: 1em;
