@@ -9,7 +9,7 @@ const Repository = () => {
   const [ repositories, setRepositories] = useState([])
 
   const fetchData = async () => {
-    await axios.get('https:api.github.com/users/fsenaweb/repos')
+    await axios.get('https://api.github.com/users/fsenaweb/repos')
       .then(response => {
         const filtered = response.data.filter(item => item.fork === false)
         setRepositories(filtered)
