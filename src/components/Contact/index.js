@@ -18,11 +18,6 @@ const Contact = () => {
     })
       .then(() => {
         toast.success('Email enviado com sucesso!')
-        console.log('Email enviado!');
-        document.getElementsByName('nome').value = '';
-        document.getElementsByName('email').value = '';
-        document.getElementsByName('telefone').value = '';
-        document.getElementsByName('mensagem').value = '';
       })
       .catch(function (error) {
         console.log(error)

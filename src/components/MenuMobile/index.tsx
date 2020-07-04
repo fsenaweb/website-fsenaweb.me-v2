@@ -7,9 +7,7 @@ import * as S from './styled'
 const MenuMobile: React.FC = () => {
 
   const [close, setClose] = useState(false);
-  const [bodyOffset, setBodyOffset] = useState(
-    document.body.getBoundingClientRect()
-  );
+  const [bodyOffset, setBodyOffset] = useState({top: 0});
   const [scrollY, setScrollY] = useState(bodyOffset.top);
 
   const toggleMenu = (): void => {
