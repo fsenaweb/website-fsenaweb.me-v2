@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `fsenaweb.me`,
-    description: `Desenvolvedor web, com experiência em PHP/Javascript utilizando ferramentas como Laravel, CodeIgniter, Docker, Vue e React .`,
+    description: `Desenvolvimento de site, sistema para internet, aplicativos para internet e intranet, Progressive Web App (PWA), Single Page Application (SPA)`,
     author: `@fsenaweb`,
+    keywords: ['desenvolvedor', 'front-end', 'frontend', 'back-end', 'backend',
+      'vue', 'react', 'php', 'javascript', 'laravel', 'sistemas web', 'aplicativos', 'site', 'internet',
+      'pwa', 'spa', 'landing page', 'progressive web app', 'Single Page Application', 'codeigniter', 'node']
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -35,39 +38,21 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `fsenaweb.me - Matheus Ricelly`,
+        short_name: `fsenaweb.me`,
+        description: `Desenvolvimento de site, sistema para internet, aplicativos para internet e intranet, Progressive Web App (PWA), Single Page Application (SPA)`,
+        lang: `pt-br`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#2f2b4a`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `fsenaweb.me`,
-        short_name: `fsenaweb`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
         display: `standalone`,
+        icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         displayName: process.env.NODE_ENV !== 'production',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        // Setting a color is optional.
-        color: `red`,
-        // Disable the loading spinner.
-        showSpinner: false,
       },
     },
     `gatsby-plugin-offline`
