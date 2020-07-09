@@ -1,3 +1,4 @@
+import React from "react";
 import styled from 'styled-components'
 import {device} from "../../styles/global";
 
@@ -142,15 +143,12 @@ export const ListRepository = styled.div`
   width: 45%;
   height: 100%;
   
-  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
-    width: 100%;
+  @media (min-width: ${device.mobileS}) and  (max-width: 700px) {
+    display: none;
   }
   
   @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
-    width: 65%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
+     width: 70%;
   }
 `;
 
@@ -258,3 +256,124 @@ export const BoxRepository = styled.div`
     
   }
 `;
+
+export const ListRepositoryMobile = styled.div`
+  display: none;
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    width: 65%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+export const BoxRepositoryMobile = styled.div`
+  display: none;
+  
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    display: block;
+    font-family: ${fontFamily};
+    font-size: 1em;
+    color: #FFF;
+    height: ${props => (props.expand ? 'auto' : '380px')};
+    width: 95%;
+    border-radius: 10px;
+    background-color: rgba(45, 40, 72, 1);
+    overflow: hidden;
+    padding: 15px;
+    background-color: #4f3272;
+    margin: 10px 0;
+    
+    & .repository-list {
+      display: inline-block;
+      width: 100%;
+    }
+    
+    & img {
+      margin: 5px 15px 20px 0;
+      float: left;
+    }
+    
+     & p.repository-name {
+      padding-top: 13px;
+      font-size: 16px;
+      letter-spacing: 0px;
+      line-height: 10px;
+      color: #fefefe;
+      font-weight: 900;
+      
+      & > a {
+        color: #fff;
+        text-decoration: none;
+        transition: color .3s ease-in;
+        
+        &:hover {
+          color: yellow;
+        }
+        
+        &:active {
+          color: #FFF;
+        }
+      }
+    }
+    
+    & p.repository-desc {
+      font-weight: 300;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 12px;
+      line-height: 30px;
+      color: #fefefe;
+    }
+   
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(39,37,62,0.3); 
+      border-radius: 0 100px 100px 0;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0 100px 100px 0;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    }
+  }
+  
+  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+    width: auto;
+    height: 430px;
+    
+  }
+`;
+
+const SeeMore = styled.div`
+  display: none;
+
+  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+    display: block;
+    width: 50%;
+    color: #813ec9;
+    font-size: 1em;
+    text-align: center;
+    margin: 0 0 .5em 0;
+    padding: 0.3em 1em;
+    border: 2px solid #813ec9;
+    border-radius: 5px;
+  }
+`;
+
+export const SeeMoreText = props =>
+  <SeeMore {...props} children={props.children} />

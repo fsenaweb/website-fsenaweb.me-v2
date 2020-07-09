@@ -27,7 +27,7 @@ const Contact = () => {
   return (
     <S.Wrapper>
       <S.Container>
-        <S.Title>Fale Conosco</S.Title>
+        <S.Title>Contatos</S.Title>
         <S.ContainerForm>
           <S.FormInfo>
             <h1>"Quando você contrata pessoas mais inteligentes do que você,
