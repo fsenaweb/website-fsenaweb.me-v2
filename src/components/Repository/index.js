@@ -30,9 +30,7 @@ const Repository = () => {
     <S.Wrapper>
       <S.Container>
         <S.IconRepository>
-          <a href="https://github.com/fsenaweb/" target="_blank" rel="noreferrer noopener">
-            <S.IconGit />
-          </a>
+          <S.IconGit />
           <h1>Repositórios</h1>
         </S.IconRepository>
         <S.ListRepository>

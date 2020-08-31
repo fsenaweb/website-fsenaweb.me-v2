@@ -3,7 +3,8 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 
 import Publication from './../Publication'
-import iconRepositoryRepos from '../../images/repository.png'
+
+const iconRepositoryRepos = require('./../../images/repository.png')
 
 import * as S from './styled';
 

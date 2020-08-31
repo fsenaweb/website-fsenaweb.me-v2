@@ -16,24 +16,22 @@ const Index = () => {
               <p>Nos meus projetos desenvolvidos, tenho soluções completas como Progressive Web App (PWA), Sites,
                 Sistemas Web, Landing Page, Single Page Application (SPA).</p>
             </S.TextDescription>
-            <S.ImageDescription>
-              <img src={PersonalPhoto} alt="Foto Currículo"/>
-            </S.ImageDescription>
+            <S.ImageDescription url={PersonalPhoto} />
           </S.BoxDescription>
           <S.BoxExperience>
             <S.Title>Últimas experiências...</S.Title>
             <CardExperience
-              ano={2010}
+              ano={2020}
               cargo={'Web System Developer'}
               empresa={'Joyjet Digital Space Agency'}
               local={'Paris - França'}/>
             <CardExperience
-              ano={2009}
+              ano={2019}
               cargo={'Full-stack developer'}
               empresa={'DevSquad'}
               local={'Salt Lake - EUA '}/>
             <CardExperience
-              ano={2009}
+              ano={2019}
               cargo={'Full-stack developer'}
               empresa={'Getty/IO'}
               local={'Wilmington - EUA'}/>

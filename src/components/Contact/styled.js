@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BGContact from "../../images/contact-bg.png";
+import BGContact from "../../images/contact-bg.jpg";
 import {device} from "../../styles/global";
 import { Linkedin, Medium, Git, Twit, Insta, Face }from '../Header/styled'
 
@@ -8,7 +8,7 @@ const fontFamily = 'Roboto, sans-serif'
 export const Wrapper = styled.div`
   font-family: ${fontFamily}; 
   width: 99vw;
-  height: 750px;
+  height: 600px;
   position: relative;
   background-image: url(${BGContact});
   background-position: bottom;
@@ -57,7 +57,7 @@ export const Title = styled.h1`
   color: #638db3;
   font-weight: 900;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   
   @media (min-width: ${device.mobileS}) and (max-width: ${device.laptopS}) {
     font-size: 2.1em;
@@ -93,19 +93,21 @@ export const ContainerForm = styled.div`
 export const FormInfo = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
   height: 100%;
+  margin: 0 auto;
   padding: 50px 25px;
   
   & h1 {
-    font-size: 1.45em;
+    font-size: 1.8em;
     letter-spacing: -1px;
     line-height: 1.1em;
     color: #333333;
     font-weight: 700;
     margin-bottom: 50px;
+    text-align: center;
   }
   
   & h2 {
@@ -114,6 +116,7 @@ export const FormInfo = styled.div`
     line-height: 1.2em;
     margin-bottom: 50px;
     font-weight: 900;
+    text-align: center;
     
     & a {
       color: #606060;

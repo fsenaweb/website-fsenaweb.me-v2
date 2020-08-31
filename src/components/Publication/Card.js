@@ -6,7 +6,7 @@ const Card = (props) => {
   return (
     <S.Card>
       <a href={props.url} target="_blank" rel="noreferrer noopener">
-        <img src={props.image} alt={props.title} />
+        <S.Image url={props.image} />
         <S.CardFooter>
           {props.title}
         </S.CardFooter>

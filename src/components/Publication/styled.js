@@ -161,6 +161,16 @@ export const Card = styled.div`
   }
 `;
 
+export const Image = styled.div`
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+  background-image: url(${props => props.url});
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 10px;
+`;
+
 export const CardFooter = styled.div`
   border-top: 0;
   padding: 7px 15px;

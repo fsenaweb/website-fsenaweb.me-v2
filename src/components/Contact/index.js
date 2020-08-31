@@ -1,28 +1,10 @@
 import React  from 'react';
-import axios from 'axios';
-import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css'
-import useForm from "./useForm";
 
 import * as S from './styled';
 import * as SocialIcon from '../Header/styled';
 
 const Contact = () => {
-
-  const [{ values, loading }, onChangeInput, enviaMail] = useForm();
-
-  const enviarContato = () => {
-    let { nome, email, telefone, mensagem } = values
-    axios.post('https://fsenaweb.me/functions/', {
-      nome, email, telefone, mensagem
-    })
-      .then(() => {
-        toast.success('Email enviado com sucesso!')
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
-  }
 
   return (
     <S.Wrapper>
@@ -45,16 +27,6 @@ const Contact = () => {
               <a href="http://www.fb.me/fsenaweb" target="_blank" aria-label="Facebook" rel="noreferrer noopener"><S.IconFace /></a>
             </SocialIcon.SocialMedia>
           </S.FormInfo>
-          <S.FormInput>
-            <ToastContainer />
-            <form id="contatoForm" action="" onSubmit={enviaMail(enviarContato)} method="post">
-            <input type="text" name="nome" placeholder="Nome" onChange={onChangeInput} required />
-            <input type="email" name="email" placeholder="E-mail" onChange={onChangeInput} required />
-            <input type="tel" name="telefone" placeholder="Telefone" onChange={onChangeInput} />
-            <textarea name="mensagem" placeholder="Sua mensagem" onChange={onChangeInput} required/>
-            <input type="submit" value={loading ? "Enviando..." : "Envie sua mensagem"} />
-        </form>
-          </S.FormInput>
         </S.ContainerForm>
       </S.Container>
     </S.Wrapper>

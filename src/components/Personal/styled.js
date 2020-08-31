@@ -119,8 +119,11 @@ export const TextDescription = styled.div`
 
 export const ImageDescription = styled.div`
   width: 40%;
-  height: auto;
+  height: 100%;
   padding-top: 20px;
+  background-image: url(${props => props.url});
+  background-size: contain;
+  background-repeat: no-repeat;
   
   & img {
     max-width: 450px;
