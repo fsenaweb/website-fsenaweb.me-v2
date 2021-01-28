@@ -269,7 +269,7 @@ export const Description = styled.div`
   
 `;
 
-export const DescriptionText = styled.div`
+export const DescriptionText = styled.h1`
   width: 90%;
   height: auto;
   font-family: ${fontFamily};
@@ -330,9 +330,9 @@ export const SocialMedia = styled.div`
 `;
 
 export const Linkedin = styled(LinkedinSquare)`
-  width: 40px;
-  height: 40px;
-  margin-left: 5px;
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
   color: white;
   transition: color .2s linear;
   
@@ -347,9 +347,9 @@ export const Linkedin = styled(LinkedinSquare)`
 `;
 
 export const Medium = styled(MediumSquare)`
-  width: 40px;
-  height: 40px;
-  margin-left: 5px;
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
   color: white;
   transition: color .2s linear;
   
@@ -360,9 +360,9 @@ export const Medium = styled(MediumSquare)`
 `;
 
 export const Insta = styled(InstagramAlt)`
-  width: 40px;
-  height: 40px;
-  margin-left: 5px;
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
   color: white;
   transition: color .2s linear;
   
@@ -373,9 +373,9 @@ export const Insta = styled(InstagramAlt)`
 `;
 
 export const Face = styled(FacebookSquare)`
-  width: 40px;
-  height: 40px;
-  margin-left: 5px;
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
   color: white;
   transition: color .2s linear;
   
@@ -386,9 +386,9 @@ export const Face = styled(FacebookSquare)`
 `;
 
 export const Git = styled(Github)`
-  width: 40px;
-  height: 40px;
-  margin-left: 5px;
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
   color: white;
   transition: color .2s linear;
   
@@ -399,9 +399,9 @@ export const Git = styled(Github)`
 `;
 
 export const Twit = styled(Twitter)`
-  width: 40px;
-  height: 40px;
-  margin-left: 5px;
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
   color: white;
   transition: color .2s linear;
   

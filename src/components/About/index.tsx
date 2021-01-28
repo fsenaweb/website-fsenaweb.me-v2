@@ -24,13 +24,12 @@ const About: React.FC = () => {
             </ul>
           </S.AboutInfo>
           <S.AboutText>
-            <p>Muito prazer, meu nome é Matheus Ricelly, sou da cidade de Pau dos Ferros, e desde  meados de 2010 trabalho como desenvolvedor web, com experiência utilizando a linguagem PHP em meus projetos. Trabalho com ferramentas como Laravel, CodeIgniter, Lumen, Git, Docker, entre outras.</p>
+            <p>Muito prazer, meu nome é Matheus Ricelly e desde  meados de 2010 trabalho com desenvolvimento web, inicialmente com a experiência como desenvolvedor back-end utilizando a linguagem PHP em meus projetos. Trabalhei com ferramentas como Laravel, CodeIgniter, Lumen entre outras.</p>
 
-            <p>Já nos últimos 4 anos, tenho me dedicado ao desenvolvimento com a Linguagem JavaScript e suas ferramentas e venho fortalecendo meus conhecimentos com o Node, Express, Adonis.js, além de ferramentas frontend como Vue e React para deixar as aplicações web mais interativas</p>
+            <p>Nos últimos anos, mais precisamente desde o ano de 2017, tenho me dedicado ao desenvolvimento front-end com a linguagem JavaScript, e através de suas ferramentas venho desenvolvendo diversas aplicações web, utilizando o Vue.js e o React (e várias ferramentas dos seus ecossistemas como Nuxt, Gatsby, Next, React Native). </p>
 
-            <p>Nos meus projetos desenvolvidos, tenho soluções completas como Progressive Web App (PWA), Sites, Sistemas Web, Landing Page, Single Page Application (SPA).</p>
+            <p>Nos meus projetos desenvolvidos, tenho soluções completas como Progressive Web App (PWA), Sites, Sistemas Web, Landing Page, Single Page Application (SPA), Aplicativos Mobile nativos e híbridos. Carreira desenvolvida na área de Tecnologia da Informação, com experiência e formação acadêmica em desenvolvimento de sistemas para web.</p>
 
-            <p>Carreira desenvolvida na área de Tecnologia da Informação, com experiência em desenvolvimento de sistemas web, implantação e manutenção de sistemas, gestão de equipes.</p>
             <S.ContainerHability>
               {icons.map((item, i) => {
                 return (
