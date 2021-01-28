@@ -12,8 +12,6 @@ const Contact = () => {
         <S.Title>Contatos</S.Title>
         <S.ContainerForm>
           <S.FormInfo>
-            <h1>"Quando você contrata pessoas mais inteligentes do que você,
-              prova que é mais inteligentes do que elas". (R. H. Grant)</h1>
             <h2>
               <a href="tel:84999959215">+55 84 99995-9216</a>
               <a href="mailto:contato@fsenaweb.me">contato@fsenaweb.me</a>

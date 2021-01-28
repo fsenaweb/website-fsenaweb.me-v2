@@ -11,10 +11,11 @@ const Index = () => {
         <S.Container>
           <S.BoxDescription>
             <S.TextDescription>
-              <p>Carreira desenvolvida na área de Tecnologia da Informação, com experiência em desenvolvimento de
-                sistemas web, implantação e manutenção de sistemas, gestão de equipes.</p>
+              <p>Carreira desenvolvida na área de Tecnologia da Informação, com experiência e formação acadêmica em desenvolvimento de
+                sistemas para web. Possuo conhecimentos com aplicações híbridas e nativas para dispositivos móveis, além
+                de soluções no backend provendo API's para diversas soluções.</p>
               <p>Nos meus projetos desenvolvidos, tenho soluções completas como Progressive Web App (PWA), Sites,
-                Sistemas Web, Landing Page, Single Page Application (SPA).</p>
+                Sistemas Web, Landing Page, Single Page Application (SPA) e Aplicativos móveis.</p>
             </S.TextDescription>
             <S.ImageDescription url={PersonalPhoto} />
           </S.BoxDescription>

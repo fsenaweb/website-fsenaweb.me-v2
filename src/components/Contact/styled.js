@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import BGContact from "../../images/contact-bg.jpg";
 import {device} from "../../styles/global";
 import { Linkedin, Medium, Git, Twit, Insta, Face }from '../Header/styled'
 
@@ -8,12 +7,8 @@ const fontFamily = 'Roboto, sans-serif'
 export const Wrapper = styled.div`
   font-family: ${fontFamily}; 
   width: 99vw;
-  height: 600px;
+  min-height: 350px;
   position: relative;
-  background-image: url(${BGContact});
-  background-position: bottom;
-  background-size: 70%;
-  background-repeat: repeat-x;
   
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
     height: auto;
@@ -71,7 +66,6 @@ export const ContainerForm = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  height: 500px;
   
   @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
     width: 100%;
@@ -98,7 +92,7 @@ export const FormInfo = styled.div`
   width: 70%;
   height: 100%;
   margin: 0 auto;
-  padding: 50px 25px;
+  padding: 20px 25px;
   
   & h1 {
     font-size: 1.8em;

@@ -35,11 +35,11 @@ const Header = () => {
           </S.HeaderPhoto>
           <S.Description>
             <S.DescriptionText>
-              Desenvolvendo as melhores soluções web para o sucesso da sua empresa
+              Matheus Ricelly <br />
+              Front-end Software Engineer
             </S.DescriptionText>
             <S.SkillText>
-              Progressive Web App - Sistemas Web - Landing Page
-              Single Page Application
+              Progressive Web App - Landing Page - Single Page Application - Mobile App
             </S.SkillText>
             <S.SocialMedia>
               <a href="http://www.linkedin.com/in/fsenaweb" aria-label="Linkedin" target="_blank" rel="noreferrer noopener"><S.Linkedin /></a>

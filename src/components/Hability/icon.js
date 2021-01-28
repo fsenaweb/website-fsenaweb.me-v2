@@ -5,7 +5,7 @@ import iconREACT from '../../images/icon-REACT.png'
 import iconLARAVEL from '../../images/icon-LARAVEL.png'
 import iconCI from '../../images/icon-CI.png'
 import iconDOCKER from '../../images/icon-DOCKER.png'
-import iconLUMEN from '../../images/icon-LUMEN.png'
+import iconTS from '../../images/icon-typescript.png'
 import iconGIT from '../../images/icon-GIT.png'
 import iconNODE from '../../images/icon-NODE.png'
 import iconADONIS from '../../images/icon-ADONIS.png'
@@ -16,40 +16,32 @@ import iconQUASAR from '../../images/icon-QUASAR.png'
 
 export const icons = [
   {
-    title: 'PHP 7',
+    title: 'PHP',
     image: iconPHP,
-  },
-  {
-    title: 'Javascript',
-    image: iconJS,
-  },
-  {
-    title: 'Vue.js',
-    image: iconVUE,
-  },
-  {
-    title: 'React.js',
-    image: iconREACT,
-  },
-  {
-    title: 'Docker',
-    image: iconDOCKER,
   },
   {
     title: 'Laravel',
     image: iconLARAVEL,
   },
   {
-    title: 'Lumen',
-    image: iconLUMEN,
-  },
-  {
     title: 'Codeigniter',
     image: iconCI,
   },
   {
-    title: 'Git',
-    image: iconGIT,
+    title: 'Javascript',
+    image: iconJS,
+  },
+  {
+    title: 'TypeScript',
+    image: iconTS,
+  },
+  {
+    title: 'React.js',
+    image: iconREACT,
+  },
+  {
+    title: 'Vue.js',
+    image: iconVUE,
   },
   {
     title: 'Node.js',
@@ -74,5 +66,13 @@ export const icons = [
   {
     title: 'Quasar',
     image: iconQUASAR,
-  }
+  },
+  {
+    title: 'Docker',
+    image: iconDOCKER,
+  },
+  {
+    title: 'Git',
+    image: iconGIT,
+  },
 ]
