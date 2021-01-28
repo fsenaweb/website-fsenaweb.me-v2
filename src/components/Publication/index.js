@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios'
+import { useTranslation } from "react-i18next"
 import Card from './Card'
 
 import iconLeft from './../../images/icon-arrow-left.png'
@@ -8,7 +9,7 @@ import iconRigth from './../../images/icon-arrow-rigth.png'
 import * as S from './styled'
 
 const Publication = () => {
-
+  const { t } = useTranslation()
   const [articles, setArticles] = useState([])
   const [currentOffset, setCurrentOffset ] = useState(0)
   const [windowSize] = useState(3)
@@ -51,7 +52,7 @@ const Publication = () => {
 
   return (
     <S.Wrapper>
-      <S.Title>Publicações</S.Title>
+      <S.Title>{t('home.publications.title')}</S.Title>
       <S.Container>
         <button onClick={() => moveCarousel(-1)}
              style={{ visibility: atHeadOfList() ? 'visible' : 'hidden' }}>
@@ -70,7 +71,7 @@ const Publication = () => {
         </button>
       </S.Container>
       <S.SeeMore>
-        Veja outros artigos e publicações em
+        {t('home.publications.description')}
         <a href="https://medium.com/@fsenaweb" rel="noreferrer noopener" target="_blank"> Medium</a> |
         <a href="https://dev.to/fsenaweb" rel="noreferrer noopener" target="_blank"> Dev.to</a>
       </S.SeeMore>
