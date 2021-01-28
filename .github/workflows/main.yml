@@ -19,11 +19,14 @@ jobs:
     steps:
     - name: Baixando repositório
       uses: actions/checkout@v2
+
     - name: Build na versão Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+
     - name: Instalando dependências
       run: npm install
+
     - name: Criando build da aplicação
-    - run: npm run build
+      run: npm run build
