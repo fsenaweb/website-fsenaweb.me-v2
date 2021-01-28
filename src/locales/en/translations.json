@@ -1,0 +1,33 @@
+{
+  "menu": {
+    "how-i-am": "Who am I",
+    "portfolio": "Portfolio"
+  },
+  "home": {
+    "skills": "Skills",
+    "repositories": "Repositories",
+    "publications": {
+      "title": "Publications",
+      "description": "See other articles and publications in "
+    },
+    "experience": {
+      "first-description": "Career developed in the Information Technology area, with experience and academic training in web systems development. I have knowledge with hybrid and native applications for mobile devices, as well as solutions on the backend providing API's for several solutions.",
+      "second-description": "\n\nIn my developed projects, I have complete solutions such as Progressive Web App (PWA), Sites, Web Systems, Landing Page, Single Page Application (SPA) and Mobile Applications.",
+      "last": "Latest experiences..."
+    },
+    "contact": "Contacts"
+  },
+  "how": {
+    "title": "Who am I",
+    "first-description": "Pleased to meet you, my name is Matheus Ricelly and since mid 2010 I have been working with web development, initially with experience as a back-end developer using the PHP language in my projects. I worked with tools like Laravel, CodeIgniter, Lumen and others.",
+    "second-description": "In the last few years, more precisely since the year 2017, I have dedicated myself to front-end development with the JavaScript language, and through its tools I have been developing several web applications, using Vue.js and React (and several tools of its ecosystems like Nuxt, Gatsby, Next, React Native).",
+    "third-description": "In my developed projects, I have complete solutions such as Progressive Web App (PWA), Sites, Web Systems, Landing Page, Single Page Application (SPA), Native and hybrid Mobile Applications. Career developed in the Information Technology area, with experience and academic training in web systems development.",
+    "academic": "ACADEMIC TRAINING",
+    "course": "Graduating in Internet Systems technology at Potiguar University - UNP",
+    "skills": "PERSONAL SKILLS",
+    "skill1": "Responsibility",
+    "skill2": "Team spirit",
+    "skill3": "Dedication",
+    "skill4": "Organization"
+  }
+}

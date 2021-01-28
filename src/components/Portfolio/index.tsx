@@ -1,19 +1,22 @@
-import * as React from 'react';
-import {useEffect, useState} from "react";
-import axios from "axios";
+import * as React from "react"
+import { useEffect, useState } from "react"
+import axios from "axios"
 
-import Publication from './../Publication'
+import Publication from "./../Publication"
 
-const iconRepositoryRepos = require('./../../images/repository.png')
+const iconRepositoryRepos = require("./../../images/repository.png")
 
-import * as S from './styled';
+import * as S from "./styled"
+import { useTranslation } from "react-i18next"
 
 const Portfolio = () => {
+  const { t } = useTranslation()
 
-  const [ repositories, setRepositories] = useState([])
+  const [repositories, setRepositories] = useState([])
 
   const fetchData = async () => {
-    await axios.get('https://api.github.com/users/fsenaweb/repos')
+    await axios
+      .get("https://api.github.com/users/fsenaweb/repos")
       .then(response => {
         const filtered = response.data.filter(item => item.fork === false)
         setRepositories(filtered)
@@ -22,36 +25,36 @@ const Portfolio = () => {
 
   useEffect(() => {
     fetchData()
-  }, []);
-
+  }, [])
 
   return (
     <S.Wrapper>
       <S.Container>
-        <S.Title>Portfólio</S.Title>
-        <Publication/>
+        <S.Title>{t("menu.portfolio")}</S.Title>
+        <Publication />
         <S.BoxRepository>
-          <S.Title>Repositórios</S.Title>
-          { repositories.map(item => (
+          <S.Title>{t("home.repositories")}</S.Title>
+          {repositories.map(item => (
             <S.CardRepository key={item.id}>
-                <img src={iconRepositoryRepos} alt={item.name}/>
-                <S.CardDescription>
-                  <p>
-                    <a href={item.html_url}
-                        target="_blank"
-                        rel="noreferrer noopener">
-                    { item.name }
-                    </a>
-                  </p>
-                  <p>{ item.description }</p>
-                </S.CardDescription>
-
+              <img src={iconRepositoryRepos} alt={item.name} />
+              <S.CardDescription>
+                <p>
+                  <a
+                    href={item.html_url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {item.name}
+                  </a>
+                </p>
+                <p>{item.description}</p>
+              </S.CardDescription>
             </S.CardRepository>
           ))}
         </S.BoxRepository>
       </S.Container>
     </S.Wrapper>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import iconRepositoryRepos from '../../images/repository-repos.png'
+import { useTranslation } from "react-i18next"
 
 import * as S from './styled'
 
 const Repository = () => {
-
+  const { t } = useTranslation()
   const [ repositories, setRepositories] = useState([]);
   const [ expand, setExpand ] = useState(false);
 
@@ -31,7 +32,7 @@ const Repository = () => {
       <S.Container>
         <S.IconRepository>
           <S.IconGit />
-          <h1>Repositórios</h1>
+          <h1>{t('home.repositories')}</h1>
         </S.IconRepository>
         <S.ListRepository>
           <S.BoxRepository>

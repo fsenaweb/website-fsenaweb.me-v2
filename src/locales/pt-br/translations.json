@@ -1,0 +1,33 @@
+{
+  "menu": {
+    "how-i-am": "Quem sou",
+    "portfolio": "Portfólio"
+  },
+  "home": {
+    "skills": "Habilidades",
+    "repositories": "Repositórios",
+    "publications": {
+      "title": "Publicações",
+      "description": "Veja outros artigos e publicações em "
+    },
+    "experience": {
+      "first-description": "Carreira desenvolvida na área de Tecnologia da Informação, com experiência e formação acadêmica em desenvolvimento de sistemas para web. Possuo conhecimentos com aplicações híbridas e nativas para dispositivos móveis, além de soluções no backend provendo API's para diversas soluções",
+      "second-description": "Nos meus projetos desenvolvidos, tenho soluções completas como Progressive Web App (PWA), Sites, Sistemas Web, Landing Page, Single Page Application (SPA) e Aplicativos móveis",
+      "last": "Últimas experiências..."
+    },
+    "contact": "Contatos"
+  },
+  "how": {
+    "title": "Quem sou",
+    "first-description": "Muito prazer, meu nome é Matheus Ricelly e desde  meados de 2010 trabalho com desenvolvimento web, inicialmente com a experiência como desenvolvedor back-end utilizando a linguagem PHP em meus projetos. Trabalhei com ferramentas como Laravel, CodeIgniter, Lumen entre outras.",
+    "second-description": "Nos últimos anos, mais precisamente desde o ano de 2017, tenho me dedicado ao desenvolvimento front-end com a linguagem JavaScript, e através de suas ferramentas venho desenvolvendo diversas aplicações web, utilizando o Vue.js e o React (e várias ferramentas dos seus ecossistemas como Nuxt, Gatsby, Next, React Native).",
+    "third-description": "Nos meus projetos desenvolvidos, tenho soluções completas como Progressive Web App (PWA), Sites, Sistemas Web, Landing Page, Single Page Application (SPA), Aplicativos Mobile nativos e híbridos. Carreira desenvolvida na área de Tecnologia da Informação, com experiência e formação acadêmica em desenvolvimento de sistemas para web.",
+    "academic": "FORMAÇÃO",
+    "course": "Graduando em tecnologia em Sistemas para Internet pela Universidade Potiguar – UNP",
+    "skills": "COMPETÊNCIAS PESSOAIS",
+    "skill1": "Responsabilidade",
+    "skill2": "Espírito de Equipe",
+    "skill3": "Dedicação",
+    "skill4": "Organização"
+  }
+}
