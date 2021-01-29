@@ -6,6 +6,8 @@
   "home": {
     "skills": "Skills",
     "repositories": "Repositories",
+    "see-more": "See more",
+    "see-less": "See less",
     "publications": {
       "title": "Publications",
       "description": "See other articles and publications in "
