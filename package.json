@@ -26,7 +26,8 @@
     "react-helmet": "^6.0.0",
     "react-i18next": "^11.8.5",
     "styled-components": "^5.1.1",
-    "styled-icons": "^10.2.1"
+    "styled-icons": "^10.2.1",
+    "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
     "prettier": "2.0.5",

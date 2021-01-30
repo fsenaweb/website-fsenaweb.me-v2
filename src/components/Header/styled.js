@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components"
+import media from "styled-media-query"
 import BgHeader from "../../images/header-bg.png"
-import { device } from "../../styles/global"
 
 import {
   LinkedinSquare,
@@ -44,23 +44,23 @@ export const Wrapper = styled.div`
   background-repeat: repeat-x;
   margin-bottom: 100px;
 
-  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+  ${media.lessThan("medium")`
     background-image: linear-gradient(to bottom, #4c2b75, #2f2b4a);
     background-position: -50% 350%;
-    height: 450px;
+    height: 380px;
     margin-bottom: 30px;
-  }
+  `};
 
-  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+  ${media.between("medium", "large")`
     width: 100vw;
     height: 600px;
     background-position: -40% 105%;
     margin-bottom: 30px;
-  }
+  `};
 
-  @media (min-width: ${device.laptopL}) {
+  ${media.greaterThan("large")`
     background-position: bottom center;
-  }
+  `};
 `
 
 export const Container = styled.div`
@@ -69,19 +69,19 @@ export const Container = styled.div`
   margin: 0 auto;
   padding-top: 20px;
 
-  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+  ${media.lessThan("medium")`
     width: 100%;
     height: 450px;
-  }
+  `};
 
-  @media screen and (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+  ${media.between("medium", "large")`
     width: 90%;
     height: 600px;
-  }
+  `};
 
-  @media (min-width: ${device.laptopL}) {
+  ${media.greaterThan("large")`
     width: 1260px;
-  }
+  `};
 `
 
 export const Top = styled.div`
@@ -120,10 +120,10 @@ export const Logo = styled.h1`
     padding-top: 12px;
   }
 
-  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+  ${media.lessThan("medium")`
     font-size: 1.8em;
     padding: 15px;
-  }
+  `};
 `
 
 export const FirstMenu = styled.div`
@@ -199,18 +199,18 @@ export const FirstMenu = styled.div`
     }
   }
 
-  @media (max-width: ${device.laptopS}) {
+  ${media.lessThan("medium")`
     ul {
       display: none;
     }
-  }
+  `};
 
-  @media (max-width: ${device.laptopM}) {
+  ${media.between("medium", "huge")`
     padding: 15px 20px;
     ul li {
       margin-left: 25px;
     }
-  }
+  `};
 `
 
 export const Content = styled.div`
@@ -221,15 +221,15 @@ export const Content = styled.div`
   height: 688px;
   position: relative;
 
-  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+  ${media.lessThan("medium")`
     justify-content: flex-start;
     align-items: flex-start;
     height: 500px;
-  }
+  `};
 
-  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+  ${media.greaterThan("medium")`
     height: 500px;
-  }
+  `};
 `
 
 export const HeaderPhoto = styled.div`
@@ -241,11 +241,11 @@ export const HeaderPhoto = styled.div`
     animation: ${fadeImage} 10s ease-in infinite;
   }
 
-  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+  ${media.lessThan("medium")`
     display: none;
-  }
+  `};
 
-  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+  ${media.between("medium", "large")`
     width: 440px;
     height: 500px;
     margin-top: 0;
@@ -255,7 +255,7 @@ export const HeaderPhoto = styled.div`
       margin-top: -80px;
       margin-left: -80px;
     }
-  }
+  `};
 `
 
 export const Description = styled.div`
@@ -263,16 +263,16 @@ export const Description = styled.div`
   width: 85%;
   margin-left: 50px;
 
-  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+  ${media.lessThan("medium")`
     width: 100%;
     margin-left: 0;
-    padding: 20px;
-  }
+    padding: 30px;
+  `};
 
-  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+  ${media.between("medium", "large")`
     padding: 0;
     margin-left: 0;
-  }
+  `};
 `
 
 export const DescriptionText = styled.h1`
@@ -287,16 +287,16 @@ export const DescriptionText = styled.h1`
   margin-top: 100px;
   margin-bottom: 20px;
 
-  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+  ${media.lessThan("medium")`
     width: 100%;
-    font-size: 1.8rem;
-    margin-top: 20px;
-  }
+    font-size: 1.6rem;
+    margin-top: 10px;
+  `};
 
-  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
+  ${media.between("medium", "large")`
     font-size: 2rem;
     margin-top: 60px;
-  }
+  `};
 `
 
 export const SkillText = styled.div`
@@ -310,15 +310,11 @@ export const SkillText = styled.div`
   margin-bottom: 50px;
   color: #638db3;
 
-  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+  ${media.lessThan("medium")`
     width: 100%;
     font-size: 1.1rem;
     margin-bottom: 30px;
-  }
-
-  @media (min-width: ${device.tablet}) and (max-width: ${device.laptopS}) {
-    font-size: 1.2rem;
-  }
+  `};
 `
 
 export const SocialMedia = styled.div`
@@ -327,9 +323,20 @@ export const SocialMedia = styled.div`
   align-items: center;
   height: 50px;
 
-  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
+  ${media.lessThan("medium")`
     align-items: flex-start;
-  }
+  `};
+
+  ${media.between("medium", "large")`
+    min-width: 320px;
+    
+    svg {
+       width: 35px;
+       height: 35px;
+       margin-left: 5px;
+    }
+  
+  `};
 `
 
 export const Linkedin = styled(LinkedinSquare)`
@@ -342,10 +349,6 @@ export const Linkedin = styled(LinkedinSquare)`
   &:hover {
     cursor: pointer;
     color: #638db3;
-  }
-
-  @media (min-width: ${device.mobileS}) and (max-width: ${device.mobileL}) {
-    margin-left: 0;
   }
 `
 
