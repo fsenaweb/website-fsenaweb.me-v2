@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components"
+import media from "styled-media-query"
 import { Link } from "gatsby"
 import { Menu } from "@styled-icons/boxicons-regular"
 import { Close } from "@styled-icons/evaicons-solid"
@@ -58,9 +59,9 @@ export const MobileMenu = styled(Menu)`
     right: 30px;
   }
 
-  @media (min-width: ${device.laptopM}) {
+  ${media.greaterThan("medium")`
     display: none;
-  }
+  `};
 `
 
 export const CloseMenu = styled(Close)`
@@ -89,9 +90,9 @@ export const CloseMenu = styled(Close)`
     right: 30px;
   }
 
-  @media (min-width: ${device.laptopM}) {
+  ${media.greaterThan("medium")`
     display: none;
-  }
+  `};
 `
 
 export const MenuIn = styled.div`
