@@ -18,13 +18,13 @@ export const Wrapper = styled.div`
   background-image: linear-gradient(to bottom, #4c2b75, #2f2b4a);
   margin-bottom: 30px;
 
-  ${media.lessThan("medium")`
-    height: auto;
-  `};
-
   ${media.between("medium", "large")`
     width: 100%;
     height: 550px;
+  `};
+
+  ${media.lessThan("medium")`
+    height: auto;
   `};
 `
 
@@ -38,15 +38,6 @@ export const Container = styled.div`
   height: 600px;
   margin: 0 auto;
 
-  ${media.lessThan("medium")`
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 95%;
-    height: auto;
-    padding: 20px 0;
-  `};
-
   ${media.between("medium", "large")`
     width: 95%;
     justify-content: center;
@@ -56,6 +47,15 @@ export const Container = styled.div`
 
   ${media.greaterThan("large")`
      width: 1260px;
+  `};
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    padding: 0 0 50px;
   `};
 `
 
@@ -80,19 +80,6 @@ export const IconRepository = styled.div`
     font-weight: 900;
   }
 
-  ${media.lessThan("medium")`
-    width: 100%;
-
-    & > h1 {
-      font-family: ${fontFamily};
-      font-size: 25px;
-      letter-spacing: -1px;
-      margin: 10px 0;
-      color: #fefefe;
-      font-weight: 700;
-    }
-  `};
-
   ${media.between("medium", "large")`
     width: 25%;
     height: auto;
@@ -101,6 +88,20 @@ export const IconRepository = styled.div`
     & > h1 {
       font-family: ${fontFamily};
       font-size: 30px;
+      letter-spacing: -1px;
+      margin: 10px 0;
+      color: #fefefe;
+      font-weight: 700;
+    }
+  `};
+
+  ${media.lessThan("medium")`
+    width: 100%;
+    margin: 10px 0 auto;
+
+    & > h1 {
+      font-family: ${fontFamily};
+      font-size: 25px;
       letter-spacing: -1px;
       margin: 10px 0;
       color: #fefefe;
@@ -227,6 +228,13 @@ export const BoxRepository = styled.div`
 export const ListRepositoryMobile = styled.div`
   display: none;
 
+  ${media.between("medium", "large")`
+    width: 65%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  `};
+
   ${media.lessThan("medium")`
     display: flex;
     flex-direction: column;
@@ -234,13 +242,6 @@ export const ListRepositoryMobile = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
-  `};
-
-  ${media.between("medium", "large")`
-    width: 65%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
   `};
 `
 

@@ -35,6 +35,14 @@ const Contact = () => {
                 <S.IconMedium />
               </a>
               <a
+                href="https://dev.to/fsenaweb"
+                target="_blank"
+                aria-label="Medium"
+                rel="noreferrer noopener"
+              >
+                <S.IconDevTo />
+              </a>
+              <a
                 href="https://github.com/fsenaweb/"
                 target="_blank"
                 aria-label="Github"

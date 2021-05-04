@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-import { Linkedin, Medium, Git, Twit, Insta, Face } from "../Header/styled"
+import { Linkedin, Medium, Git, Twit, Insta, Face, Dev } from "../Header/styled"
 
 const fontFamily = "Roboto, sans-serif"
 
@@ -161,6 +161,22 @@ export const IconMedium = styled(Medium)`
     cursor: pointer;
     color: #638db3;
   }
+`
+
+export const IconDevTo = styled(Dev)`
+  color: #606060;
+  transition: color 0.2s linear;
+
+  &:hover {
+    cursor: pointer;
+    color: #638db3;
+  }
+
+  ${media.lessThan("small")`
+    width: 35px;
+    height: 35px;
+    margin-left: 1px;
+  `};
 `
 
 export const IconInsta = styled(Insta)`
