@@ -21,6 +21,11 @@ export const Wrapper = styled.div`
     margin-bottom: 30px;
   `};
 
+  ${media.between("medium", "large")`
+    min-height: 600px;
+    padding-bottom: 20px;
+  `};
+
   ${media.greaterThan("medium")`
     width: 100%;
   `};
@@ -41,7 +46,7 @@ export const Container = styled.div`
   `};
 
   ${media.between("medium", "large")`
-    width: 90%;
+    width: 95%;
   `};
 
   ${media.greaterThan("large")`
@@ -63,7 +68,13 @@ export const BoxDescription = styled.div`
     align-items: center;
   `};
 
-  ${media.greaterThan("medium")`
+  ${media.between("medium", "large")`
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  `};
+
+  ${media.greaterThan("large")`
     margin-top: 50px;
   `};
 `
@@ -77,6 +88,7 @@ export const TextDescription = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   font-family: ${fontFamily};
+  margin-top: 25px;
 
   & p {
     font-size: 1.45em;
@@ -102,9 +114,9 @@ export const TextDescription = styled.div`
   `};
 
   ${media.between("medium", "large")`
-     width: 55%;
+     width: 100%;
      height: 95%;
-     padding: 60px 10px;
+     padding: 10px 10px;
 
     & p {
       font-size: 1.2em;
@@ -137,8 +149,9 @@ export const ImageDescription = styled.div`
   `};
 
   ${media.between("medium", "large")`
-    width: 45%;
-    padding-top: 70px;
+    width: 65%;
+    min-height: 300px;
+    margin-top: 50px;
     & img {
       max-width: 100%;
       
@@ -150,6 +163,7 @@ export const BoxExperience = styled.div`
   width: 100%;
   height: 100%;
   padding: 10px;
+  margin-top: 25px;
 
   ${media.lessThan("medium")`
     margin-top: 30px;
@@ -159,8 +173,13 @@ export const BoxExperience = styled.div`
     align-items: center;
   `};
 
-  ${media.greaterThan("medium")`
-    padding: 0;
+  ${media.between("medium", "large")`
+    margin-top: 0;
+    height: 350px;
+  `};
+
+  ${media.greaterThan("large")`
+    padding-top: 50px;
   `};
 `
 

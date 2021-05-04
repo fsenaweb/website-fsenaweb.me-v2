@@ -147,18 +147,18 @@ export const Card = styled.div`
     text-decoration: none;
   }
 
-  ${media.lessThan("medium")`
-    height: auto;
-    min-height: 300px
-    width: 100%;
-    margin: 0;
-    margin-top: 20px;
-  `};
-
   ${media.between("medium", "large")`
     height: auto;
     min-height: 170px;
     margin: 0 15px 2px 10px;
+  `};
+
+  ${media.lessThan("medium")`
+    width: 90%;
+    height: auto;
+    min-height: 300px
+    margin: 0;
+    margin-top: 20px;
   `};
 `
 

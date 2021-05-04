@@ -9,6 +9,7 @@ import {
   FacebookSquare,
   Github,
   Twitter,
+  DevTo,
 } from "@styled-icons/boxicons-logos"
 
 const fontFamily = "Roboto, sans-serif"
@@ -44,17 +45,17 @@ export const Wrapper = styled.div`
   background-repeat: repeat-x;
   margin-bottom: 100px;
 
+  ${media.between("medium", "large")`
+    width: 100vw;
+    height: 590px;
+    background-position: -40% 105%;
+    margin-bottom: 30px;
+  `};
+
   ${media.lessThan("medium")`
     background-image: linear-gradient(to bottom, #4c2b75, #2f2b4a);
     background-position: -50% 350%;
     height: 380px;
-    margin-bottom: 30px;
-  `};
-
-  ${media.between("medium", "large")`
-    width: 100vw;
-    height: 600px;
-    background-position: -40% 105%;
     margin-bottom: 30px;
   `};
 
@@ -329,6 +330,7 @@ export const SocialMedia = styled.div`
 
   ${media.between("medium", "large")`
     min-width: 320px;
+    margin-left: 40px;
     
     svg {
        width: 35px;
@@ -350,6 +352,12 @@ export const Linkedin = styled(LinkedinSquare)`
     cursor: pointer;
     color: #638db3;
   }
+
+  ${media.lessThan("small")`
+    width: 35px;
+    height: 35px;
+    margin-left: 0;
+  `};
 `
 
 export const Medium = styled(MediumSquare)`
@@ -363,6 +371,31 @@ export const Medium = styled(MediumSquare)`
     cursor: pointer;
     color: #638db3;
   }
+
+  ${media.lessThan("small")`
+    width: 35px;
+    height: 35px;
+    margin-left: 1px;
+  `};
+`
+
+export const Dev = styled(DevTo)`
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  color: white;
+  transition: color 0.2s linear;
+
+  &:hover {
+    cursor: pointer;
+    color: #638db3;
+  }
+
+  ${media.lessThan("small")`
+    width: 35px;
+    height: 35px;
+    margin-left: 1px;
+  `};
 `
 
 export const Insta = styled(InstagramAlt)`
@@ -376,6 +409,12 @@ export const Insta = styled(InstagramAlt)`
     cursor: pointer;
     color: #638db3;
   }
+
+  ${media.lessThan("small")`
+    width: 35px;
+    height: 35px;
+    margin-left: 1px;
+  `};
 `
 
 export const Face = styled(FacebookSquare)`
@@ -389,6 +428,12 @@ export const Face = styled(FacebookSquare)`
     cursor: pointer;
     color: #638db3;
   }
+
+  ${media.lessThan("small")`
+    width: 35px;
+    height: 35px;
+    margin-left: 1px;
+  `};
 `
 
 export const Git = styled(Github)`
@@ -402,6 +447,12 @@ export const Git = styled(Github)`
     cursor: pointer;
     color: #638db3;
   }
+
+  ${media.lessThan("small")`
+    width: 35px;
+    height: 35px;
+    margin-left: 1px;
+  `};
 `
 
 export const Twit = styled(Twitter)`
@@ -415,4 +466,10 @@ export const Twit = styled(Twitter)`
     cursor: pointer;
     color: #638db3;
   }
+
+  ${media.lessThan("small")`
+    width: 35px;
+    height: 35px;
+    margin-left: 1px;
+  `};
 `

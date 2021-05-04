@@ -80,6 +80,14 @@ const Header = props => {
                 <S.Medium />
               </a>
               <a
+                href="https://dev.to/fsenaweb"
+                target="_blank"
+                aria-label="Medium"
+                rel="noreferrer noopener"
+              >
+                <S.Dev />
+              </a>
+              <a
                 href="https://github.com/fsenaweb/"
                 target="_blank"
                 aria-label="Github"
