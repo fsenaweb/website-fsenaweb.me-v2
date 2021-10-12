@@ -21,7 +21,13 @@ const Index = () => {
           <S.BoxExperience>
             <S.Title>{t("home.experience.last")}</S.Title>
             <CardExperience
-              ano={2020}
+              ano={2021}
+              cargo={"Frontend developer"}
+              empresa={"IZA.com.vc "}
+              local={"São Paulo/SP - Brasil"}
+            />
+            <CardExperience
+              ano={2021}
               cargo={"Frontend developer"}
               empresa={"Flapper"}
               local={"Belo Horizonte/MG - Brasil"}
@@ -31,12 +37,6 @@ const Index = () => {
               cargo={"Web System Developer"}
               empresa={"Joyjet Digital Space Agency"}
               local={"Paris - França"}
-            />
-            <CardExperience
-              ano={2019}
-              cargo={"Full-stack developer"}
-              empresa={"DevSquad"}
-              local={"Salt Lake - EUA "}
             />
           </S.BoxExperience>
         </S.Container>

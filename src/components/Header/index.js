@@ -103,22 +103,6 @@ const Header = props => {
               >
                 <S.Twit />
               </a>
-              <a
-                href="http://www.instagram.com/fsenaweb"
-                target="_blank"
-                aria-label="Instagram"
-                rel="noreferrer noopener"
-              >
-                <S.Insta />
-              </a>
-              <a
-                href="http://www.fb.me/fsenaweb"
-                target="_blank"
-                aria-label="Facebook"
-                rel="noreferrer noopener"
-              >
-                <S.Face />
-              </a>
             </S.SocialMedia>
           </S.Description>
         </S.Content>

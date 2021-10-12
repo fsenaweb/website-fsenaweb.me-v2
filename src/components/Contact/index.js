@@ -58,22 +58,6 @@ const Contact = () => {
               >
                 <S.IconTwit />
               </a>
-              <a
-                href="http://www.instagram.com/fsenaweb"
-                target="_blank"
-                aria-label="Instagram"
-                rel="noreferrer noopener"
-              >
-                <S.IconInsta />
-              </a>
-              <a
-                href="http://www.fb.me/fsenaweb"
-                target="_blank"
-                aria-label="Facebook"
-                rel="noreferrer noopener"
-              >
-                <S.IconFace />
-              </a>
             </SocialIcon.SocialMedia>
           </S.FormInfo>
         </S.ContainerForm>
