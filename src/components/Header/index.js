@@ -26,7 +26,7 @@ const Header = props => {
         <S.Top>
           <S.Logo>
             <Link to="/">
-              fsenaweb<span>.me</span>
+              fsenaweb<span>.dev</span>
             </Link>
           </S.Logo>
           <S.FirstMenu>

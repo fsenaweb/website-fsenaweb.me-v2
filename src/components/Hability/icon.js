@@ -11,7 +11,6 @@ import iconNODE from "../../images/icon-NODE.png"
 import iconADONIS from "../../images/icon-ADONIS.png"
 import iconGASTBY from "../../images/icon-GASTBY.png"
 import iconNEXT from "../../images/icon-NEXT.png"
-import iconGRQL from "../../images/icon-GRQL.png"
 import iconNUXT from "../../images/icon-NUXT.png"
 import iconQUASAR from "../../images/icon-QUASAR.png"
 

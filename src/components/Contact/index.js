@@ -15,7 +15,7 @@ const Contact = () => {
           <S.FormInfo>
             <h2>
               <a href="tel:84999959215">+55 84 99995-9216</a>
-              <a href="mailto:contato@fsenaweb.me">contato@fsenaweb.me</a>
+              <a href="mailto:fsenaweb@gmail.com">fsenaweb@gmail.com</a>
             </h2>
             <SocialIcon.SocialMedia>
               <a

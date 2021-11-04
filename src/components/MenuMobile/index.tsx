@@ -51,7 +51,7 @@ const MenuMobile: React.FC = () => {
       <S.MenuIn isOpen={close}>
         <S.Logo>
           <Link to="/">
-            fsenaweb<span>.me</span>
+            fsenaweb<span>.dev</span>
           </Link>
         </S.Logo>
         <S.LangButton>
