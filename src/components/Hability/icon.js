@@ -12,7 +12,6 @@ import iconADONIS from "../../images/icon-ADONIS.png"
 import iconGASTBY from "../../images/icon-GASTBY.png"
 import iconNEXT from "../../images/icon-NEXT.png"
 import iconNUXT from "../../images/icon-NUXT.png"
-import iconQUASAR from "../../images/icon-QUASAR.png"
 
 export const icons = [
   {
@@ -50,10 +49,6 @@ export const icons = [
   {
     title: "Adonis",
     image: iconADONIS,
-  },
-  {
-    title: "Quasar",
-    image: iconQUASAR,
   },
   {
     title: "PHP",
