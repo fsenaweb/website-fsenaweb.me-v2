@@ -7,8 +7,6 @@ import iconCI from "../../images/icon-CI.png"
 import iconDOCKER from "../../images/icon-DOCKER.png"
 import iconTS from "../../images/icon-typescript.png"
 import iconGIT from "../../images/icon-GIT.png"
-import iconNODE from "../../images/icon-NODE.png"
-import iconADONIS from "../../images/icon-ADONIS.png"
 import iconGASTBY from "../../images/icon-GASTBY.png"
 import iconNEXT from "../../images/icon-NEXT.png"
 import iconNUXT from "../../images/icon-NUXT.png"
@@ -31,10 +29,6 @@ export const icons = [
     image: iconREACT,
   },
   {
-    title: "Node.js",
-    image: iconNODE,
-  },
-  {
     title: "Gastby",
     image: iconGASTBY,
   },
@@ -45,10 +39,6 @@ export const icons = [
   {
     title: "Next.js",
     image: iconNEXT,
-  },
-  {
-    title: "Adonis",
-    image: iconADONIS,
   },
   {
     title: "PHP",
