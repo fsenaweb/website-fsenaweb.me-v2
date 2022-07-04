@@ -37,6 +37,9 @@
   "keywords": [
     "gatsby"
   ],
+  "engines": {
+    "node": "14.x"
+  },
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
